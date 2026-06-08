@@ -1,0 +1,23 @@
+# Ignore everything by default at root
+/*
+
+# Allow only these specific directories and the .gitignore itself
+!/Ameoo/
+!/Backend/
+!/.gitignore
+
+# Sub-rules to ignore build/dependency files in allowed directories
+**/node_modules/
+**/.git_bak/
+**/dist/
+**/.vite/
+**/.vscode/
+**/.idea/
+**/.vs/
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+**/*.zip
+**/*.rar
+**/*.log
