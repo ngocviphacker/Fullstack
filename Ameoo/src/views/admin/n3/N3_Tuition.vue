@@ -4,7 +4,7 @@ import { localDB, N3_API_URL } from '../../../data/mockN3.js'
 
 // ── STATE ──────────────────────────────────────────────────────
 const activeTab = ref('invoices') // invoices | payment | receipts | reports | config
-const backendUrl = ref(localStorage.getItem('n3_api_url') || N3_API_URL)
+const backendUrl = ref(N3_API_URL)
 const isOnline = ref(false)
 const connStatus = ref('offline') // offline | checking | connected | failed
 const toastMsg = ref('')
