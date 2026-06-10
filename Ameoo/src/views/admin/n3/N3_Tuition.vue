@@ -814,7 +814,7 @@ onMounted(() => { loadDB(); checkConnection() })
             </div>
             <div class="grid grid-cols-2 gap-2">
               <button @click="backendUrl='http://localhost:5000';checkConnection()" class="py-2 px-3 bg-white hover:bg-slate-50 text-slate-600 rounded-xl text-[10px] font-bold border border-slate-200 text-center">💻 Local (5000)</button>
-              <button @click="backendUrl='http://180.93.36.113:5000';checkConnection()" class="py-2 px-3 bg-white hover:bg-slate-50 text-slate-600 rounded-xl text-[10px] font-bold border border-slate-200 text-center">☁️ VPS Cloud</button>
+              <button @click="backendUrl=`${window.location.protocol}//${window.location.host}`;checkConnection()" class="py-2 px-3 bg-white hover:bg-slate-50 text-slate-600 rounded-xl text-[10px] font-bold border border-slate-200 text-center">☁️ VPS Cloud (Tên miền)</button>
             </div>
             <button @click="checkConnection()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black shadow-md shadow-indigo-500/20 transition-all">
               ⚡ Ping & Kết nối

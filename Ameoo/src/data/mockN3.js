@@ -104,6 +104,8 @@ export const graduationReqs = [
 ]
 
 // ────────────────────────────────────────────
-// 6. BACKEND API CONFIG
-// ────────────────────────────────────────────
-export const N3_API_URL = 'http://180.93.36.113:5000'  // VPS URL (Nhóm 3 đã deploy)
+export const N3_API_URL = 
+  localStorage.getItem("n3_api_url") || 
+  (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:5000"
+    : `${window.location.protocol}//${window.location.host}`);
